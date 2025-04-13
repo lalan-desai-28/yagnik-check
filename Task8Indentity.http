@@ -1,0 +1,6 @@
+@Task8Indentity_HostAddress = http://localhost:5207
+
+GET {{Task8Indentity_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

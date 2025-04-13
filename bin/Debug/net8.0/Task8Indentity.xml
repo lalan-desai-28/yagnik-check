@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task8Indentity</name>
+    </assembly>
+    <members>
+        <member name="M:Task8Indentity.Controllers.AdminContoller.AdminOnlyEndpoint">
+            <summary>
+            This endpoint is accessible only by users with the "Admin" role.
+            </summary>
+            <returns>A success message indicating the endpoint is accessible only by Admins.</returns>
+        </member>
+        <member name="M:Task8Indentity.Controllers.AuthController.Register(Task8Indentity.Models.RegisterModel)">
+            <summary>
+            Register a new user in the system.
+            </summary>
+            <param name="model">The user registration model containing username, email, password, and role.</param>
+            <returns>Returns a success message upon successful registration, or validation errors if any.</returns>
+        </member>
+        <member name="M:Task8Indentity.Controllers.AuthController.Login(Task8Indentity.Models.LoginModel)">
+            <summary>
+            Login an existing user and generate a JWT token and refresh token.
+            </summary>
+            <param name="model">The login model containing username and password.</param>
+            <returns>A JWT token and refresh token if the login is successful, or an error message if the login fails.</returns>
+        </member>
+        <member name="M:Task8Indentity.Controllers.AuthController.RefreshToken(Task8Indentity.Models.TokenRefreshRequest)">
+            <summary>
+            Refresh the JWT token using a valid refresh token.
+            </summary>
+            <param name="request">The token refresh request containing the expired access token and refresh token.</param>
+            <returns>A new JWT token and refresh token if the refresh is successful, or an error message if it fails.</returns>
+        </member>
+        <member name="M:Task8Indentity.Controllers.AuthController.RevokeToken">
+            <summary>
+            Revoke the refresh token for the current user.
+            </summary>
+            <returns>Success message if the token was successfully revoked, or an error message if it fails.</returns>
+        </member>
+        <member name="T:Task8Indentity.Controllers.CategoryController">
+            <summary>
+            Controller for managing categories in the product catalog.
+            </summary>
+        </member>
+        <member name="M:Task8Indentity.Controllers.CategoryController.GetAllCategories">
+            <summary>
+            Get all categories in the catalog.
+            </summary>
+            <returns>A list of all categories.</returns>
+            <response code="200">Returns the list of categories.</response>
+            <response code="400">Bad request if any issue occurs.</response>
+        </member>
+        <member name="M:Task8Indentity.Controllers.CategoryController.GetCategoryById(System.String)">
+            <summary>
+            Get a specific category by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the category.</param>
+            <returns>The category with the specified ID.</returns>
+            <response code="200">Returns the category details.</response>
+            <response code="404">Category not found if no category matches the ID.</response>
+        </member>
+        <member name="M:Task8Indentity.Controllers.CategoryController.CreateCategory(ProductCatalog.Models.Category)">
+            <summary>
+            Create a new category in the catalog.
+            </summary>
+            <param name="category">The category data to be created.</param>
+            <returns>The created category.</returns>
+            <response code="201">Returns the created category.</response>
+            <response code="400">If the category already exists by name.</response>
+            <response code="403">Forbidden if the user doesn't have the right role (Admin, Manager).</response>
+        </member>
+        <member name="M:Task8Indentity.Controllers.CategoryController.UpdateCategory(System.String,ProductCatalog.Models.Category)">
+            <summary>
+            Update an existing category in the catalog.
+            </summary>
+            <param name="id">The unique identifier of the category to be updated.</param>
+            <param name="category">The updated category data.</param>
+            <returns>Returns no content if the category was updated successfully.</returns>
+            <response code="204">Category updated successfully.</response>
+            <response code="404">Category not found if no category matches the ID.</response>
+            <response code="403">Forbidden if the user doesn't have the right role (Admin, Manager).</response>
+        </member>
+        <member name="M:Task8Indentity.Controllers.CategoryController.DeleteCategory(System.String)">
+            <summary>
+            Delete a category from the catalog.
+            </summary>
+            <param name="id">The unique identifier of the category to be deleted.</param>
+            <returns>Returns no content if the category was deleted successfully.</returns>
+            <response code="204">Category deleted successfully.</response>
+            <response code="404">Category not found if no category matches the ID.</response>
+            <response code="403">Forbidden if the user doesn't have the right role (Admin, Manager).</response>
+        </member>
+        <member name="T:Task8Indentity.Controllers.ProductController">
+            <summary>
+            Controller for managing products in the catalog.
+            </summary>
+        </member>
+        <member name="M:Task8Indentity.Controllers.ProductController.#ctor(ProductCatalog.IRepositories.IProductRepository,ProductCatalog.IRepositories.ICategoryRepository)">
+            <summary>
+            Controller for managing products in the catalog.
+            </summary>
+        </member>
+        <member name="M:Task8Indentity.Controllers.ProductController.GetAllProducts">
+            <summary>
+            Get all products from the catalog.
+            </summary>
+            <returns>A list of all products.</returns>
+            <response code="200">Returns the list of products.</response>
+            <response code="400">Bad request if any issue occurs.</response>
+        </member>
+        <member name="M:Task8Indentity.Controllers.ProductController.GetProductById(System.String)">
+            <summary>
+            Get a specific product by its unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the product.</param>
+            <returns>The product with the specified ID.</returns>
+            <response code="200">Returns the product details.</response>
+            <response code="404">Product not found if no product matches the ID.</response>
+        </member>
+        <member name="M:Task8Indentity.Controllers.ProductController.GetProductsByCategory(System.String)">
+            <summary>
+            Get all products in a specific category.
+            </summary>
+            <param name="categoryId">The unique identifier of the category.</param>
+            <returns>A list of products in the specified category.</returns>
+            <response code="200">Returns the list of products in the category.</response>
+            <response code="404">If the category does not exist or no products are found for that category.</response>
+        </member>
+        <member name="M:Task8Indentity.Controllers.ProductController.CreateProduct(ProductCatalog.Models.Product)">
+            <summary>
+            Create a new product in the catalog.
+            </summary>
+            <param name="product">The product data to be created.</param>
+            <returns>The created product.</returns>
+            <response code="201">Returns the created product.</response>
+            <response code="400">If the Category ID is invalid.</response>
+            <response code="403">Forbidden if the user doesn't have the right role (Admin, Manager).</response>
+        </member>
+        <member name="M:Task8Indentity.Controllers.ProductController.UpdateProduct(System.String,ProductCatalog.Models.Product)">
+            <summary>
+            Update an existing product in the catalog.
+            </summary>
+            <param name="id">The unique identifier of the product to be updated.</param>
+            <param name="product">The updated product data.</param>
+            <returns>Returns no content if the product was updated successfully.</returns>
+            <response code="204">Product updated successfully.</response>
+            <response code="400">If the Category ID is invalid or the product details are incorrect.</response>
+            <response code="404">Product not found if no product matches the ID.</response>
+            <response code="403">Forbidden if the user doesn't have the right role (Admin, Manager).</response>
+        </member>
+        <member name="M:Task8Indentity.Controllers.ProductController.DeleteProduct(System.String)">
+            <summary>
+            Delete a product from the catalog.
+            </summary>
+            <param name="id">The unique identifier of the product to be deleted.</param>
+            <returns>Returns no content if the product was deleted successfully.</returns>
+            <response code="204">Product deleted successfully.</response>
+            <response code="404">Product not found if no product matches the ID.</response>
+            <response code="403">Forbidden if the user doesn't have the right role (Admin, Manager).</response>
+        </member>
+        <member name="M:Task8Indentity.Controllers.UserController.UserOrAdminEndpoint">
+            <summary>
+            This endpoint is accessible by users with either the "Admin" or "User" role.
+            </summary>
+            <returns>A success message indicating the endpoint is accessible by Admins and Users.</returns>
+        </member>
+        <member name="M:Task8Indentity.Controllers.UserController.GetAllUsers">
+            <summary>
+            Get all registered users (accessible by Admin only).
+            </summary>
+            <returns>A list of registered users.</returns>
+        </member>
+    </members>
+</doc>

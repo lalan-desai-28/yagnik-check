@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\SatvaSolutions\\Trainee2025-Yagnik\\Trainee2025-Yagnik\\Yagnik-Pithva\\.NET\\Task8Indentity\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7B05219F-6532-4335-93EF-9128DCC77085}|Task8Indentity.csproj|d:\\satvasolutions\\trainee2025-yagnik\\trainee2025-yagnik\\yagnik-pithva\\.net\\task8indentity\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B05219F-6532-4335-93EF-9128DCC77085}|Task8Indentity.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD14896B-6104-4430-BAD0-13E52DCE373E}|..\\ProductCatalog\\ProductCatalog.csproj|d:\\satvasolutions\\trainee2025-yagnik\\trainee2025-yagnik\\yagnik-pithva\\.net\\productcatalog\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\SatvaSolutions\\Trainee2025-Yagnik\\Trainee2025-Yagnik\\Yagnik-Pithva\\.NET\\ProductCatalog\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "..\\ProductCatalog\\Repositories\\ProductRepository.cs",
+              "ToolTip": "D:\\SatvaSolutions\\Trainee2025-Yagnik\\Trainee2025-Yagnik\\Yagnik-Pithva\\.NET\\ProductCatalog\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "..\\ProductCatalog\\Repositories\\ProductRepository.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAArwBkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T19:42:49.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\SatvaSolutions\\Trainee2025-Yagnik\\Trainee2025-Yagnik\\Yagnik-Pithva\\.NET\\Task8Indentity\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "D:\\SatvaSolutions\\Trainee2025-Yagnik\\Trainee2025-Yagnik\\Yagnik-Pithva\\.NET\\Task8Indentity\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAQwEoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T19:41:43.136Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
